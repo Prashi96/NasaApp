@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NasaApp</string>
+    <string name="photo">Photo</string>
+    <string name="favourite">Favourite</string>
+</resources>

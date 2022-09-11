@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.pp.nasaapp.MainViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_calendar_today"
+            android:layout_margin="16dp"
+            android:drawablePadding="8dp"
+            android:focusable="false"
+            android:onClick="@{()->viewmodel.onDisplayDatePickerClick()}"
+            android:text="Please Select the date"
+            />
+        <com.pp.nasaapp.view.CustomViewPager
+            android:id="@+id/vp_screens"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@color/purple_200"
+            android:visibility="visible"
+            app:labelVisibilityMode="labeled"
+            app:itemBackground="@drawable/bn_item_bag"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/navigation" />
+
+    </LinearLayout>
+
+
+</layout>
